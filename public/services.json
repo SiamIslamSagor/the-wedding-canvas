@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Private & Group Lessons",
+    "image": "https://example.com/private_group_lessons.jpg",
+    "price": "$99.99",
+    "short_description": "Personalized and group yoga lessons for all levels.",
+    "long_description": "Our private and group yoga lessons cater to both individuals looking for personalized instruction and groups wanting to practice together. Whether you're a beginner or an experienced yogi, our certified instructors will guide you on your yoga journey with care and expertise. Join us today to experience the joy of yoga."
+  },
+  {
+    "id": 2,
+    "name": "Yoga for Pregnant",
+    "image": "https://example.com/yoga_for_pregnant.jpg",
+    "price": "$79.99",
+    "short_description": "Safe and gentle yoga for expectant mothers.",
+    "long_description": "Our yoga for pregnant women is designed to support you during this special time in your life. With gentle poses and breathing exercises, our classes provide a safe and nurturing environment for expectant mothers to relax, stretch, and connect with their bodies and babies. Embrace the beauty of pregnancy with us."
+  },
+  {
+    "id": 3,
+    "name": "Yoga for Beginners",
+    "image": "https://example.com/yoga_for_beginners.jpg",
+    "price": "$69.99",
+    "short_description": "Introductory yoga classes for newcomers.",
+    "long_description": "New to yoga? Our Yoga for Beginners classes are perfect for those who are just starting their yoga journey. Learn the fundamentals of yoga poses, alignment, and breathing techniques in a supportive and friendly atmosphere. Discover the path to health and well-being."
+  },
+  {
+    "id": 4,
+    "name": "Yoga Barre",
+    "image": "https://example.com/yoga_barre.jpg",
+    "price": "$89.99",
+    "short_description": "Combine yoga and barre for a total body workout.",
+    "long_description": "Yoga Barre combines the best of yoga and barre fitness for a unique and effective total body workout. Strengthen your core, improve flexibility, and tone your muscles while enjoying the mind-body benefits of yoga. Elevate your fitness journey with us."
+  },
+  {
+    "id": 5,
+    "name": "Yoga Core",
+    "image": "https://example.com/yoga_core.jpg",
+    "price": "$79.99",
+    "short_description": "Focus on strengthening your core with yoga.",
+    "long_description": "Yoga Core is designed to target and strengthen your core muscles through a series of yoga poses and exercises. Build a strong and stable foundation while enhancing your overall yoga practice. Transform your body and mind with us."
+  },
+  {
+    "id": 6,
+    "name": "Yoga Restore",
+    "image": "https://example.com/yoga_restore.jpg",
+    "price": "$89.99",
+    "short_description": "Relax and restore your body and mind.",
+    "long_description": "Yoga Restore offers a gentle and restorative yoga experience, perfect for those seeking relaxation and stress relief. Unwind and rejuvenate with calming poses, deep stretches, and mindful breathing techniques. Rediscover tranquility with us."
+  }
+]

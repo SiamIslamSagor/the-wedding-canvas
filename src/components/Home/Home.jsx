@@ -1,10 +1,11 @@
 import Hero from "../Hero/Hero";
+import Services from "../Services/Services ";
 
 const Home = () => {
   return (
     <div>
       <Hero></Hero>
-      <div className="h-[200vh]"></div>
+      <Services></Services>
     </div>
   );
 };
