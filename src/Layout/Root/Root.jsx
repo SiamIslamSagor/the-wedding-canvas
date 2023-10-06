@@ -3,9 +3,11 @@ import Navbar from "../../components/Navbar/Navbar";
 
 const Root = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div>
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 };

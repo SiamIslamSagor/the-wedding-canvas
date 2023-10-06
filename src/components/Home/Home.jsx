@@ -1,7 +1,10 @@
+import Hero from "../Hero/Hero";
+
 const Home = () => {
   return (
     <div>
-      <h2>this is home</h2>
+      <Hero></Hero>
+      <div className="h-[200vh]"></div>
     </div>
   );
 };
