@@ -146,22 +146,22 @@ const KeyFeatures = () => {
           </p>
           <h4 className="font-bold">Key benefits for long stay residents:</h4>
           <ul className="list-disc	ml-5">
-            <li className="  ">
+            <li>
               Housekeeping cleaning services including full linen change 2 times
               per week
             </li>
-            <li className="  ">
+            <li>
               Premium coffee and tea replenishments on the day of Housekeeping
             </li>
-            <li className="  ">Complimentary valet parking services</li>
-            <li className="  ">Two complimentary covered parking spaces</li>
-            <li className="  ">30% off on laundry and dry cleaning services</li>
-            <li className="  ">
+            <li>Complimentary valet parking services</li>
+            <li>Two complimentary covered parking spaces</li>
+            <li>30% off on laundry and dry cleaning services</li>
+            <li>
               25% off at The SPA and all F&B outlets, except Q’s bar and lounge
             </li>
-            <li className="  ">15% off on in-room dining</li>
-            <li className="  ">10% off on business centre services</li>
-            <li className="  ">
+            <li>15% off on in-room dining</li>
+            <li>10% off on business centre services</li>
+            <li>
               Complimentary Wi-Fi, LED TVs, media docking station and coffee and
               tea making facilities
             </li>
