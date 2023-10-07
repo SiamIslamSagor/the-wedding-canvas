@@ -11,7 +11,7 @@ const Services = () => {
     Aos.init();
   }, []);
   return (
-    <div className="container mx-auto">
+    <div className="container mb-20 mx-auto">
       <p data-aos="slide-up" className="text-5xl font-bold text-center my-20">
         Our Services
       </p>
@@ -20,7 +20,7 @@ const Services = () => {
           <div
             data-aos="slide-up"
             key={service.id}
-            className="card  bg-base-100 shadow-xl"
+            className="card bg-base-100 shadow-xl"
           >
             <figure className="px-10 pt-10">
               <img

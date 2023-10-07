@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BsArrowUpCircle } from "react-icons/bs";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Gallery = () => {
   const [allImg, setAllImg] = useState([]);
 
-  const handleTop = () => {
-    // Scroll to the top of the page smoothly
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const { handleTop } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("gallery.json")

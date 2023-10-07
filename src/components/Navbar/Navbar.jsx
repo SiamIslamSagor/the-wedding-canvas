@@ -37,7 +37,7 @@ const Navbar = () => {
   );
   return (
     <div
-      data-aos="slide-down"
+      // data-aos="slide-down"
       className="z-50  duration-700 sticky top-0  max-lg:bg-black max-lg:text-white lg:bg-white lg:text-custom-color drop-shadow-lg "
     >
       <div className="navbar lg:bg-base-100 container mx-auto">

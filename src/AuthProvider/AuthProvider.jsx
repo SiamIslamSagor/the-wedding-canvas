@@ -5,12 +5,22 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const [services, setServices] = useState([]);
+
+  // scroll top
+  const handleTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     fetch("services.json")
       .then(res => res.json())
       .then(result => setServices(result));
   }, []);
   const data = {
+    handleTop,
     user: "moksed ali",
     services,
   };
