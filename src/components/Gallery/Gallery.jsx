@@ -1,11 +1,8 @@
-import { useContext, useEffect, useState } from "react";
-import { BsArrowUpCircle } from "react-icons/bs";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useEffect, useState } from "react";
+import ScrollTop from "../ScrollTop/ScrollTop";
 
 const Gallery = () => {
   const [allImg, setAllImg] = useState([]);
-
-  const { handleTop } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("gallery.json")
@@ -22,26 +19,17 @@ const Gallery = () => {
       </h3>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {allImg.map(img => (
-          <div
-            data-aos="flip-left"
-            // data-aos="slide-up"
-            key={img.id}
-            className=""
-          >
-            <img src={img.image} alt="Shoes" className="w-full h-[290px]" />
+          <div data-aos="flip-left" data-aos-duration="800" key={img.id}>
+            <img
+              src={img.image}
+              alt="Shoes"
+              className="w-full cursor-pointer h-[290px]"
+            />
             <p className="uppercase text-center my-4">{img?.DESCRIPTION}</p>
           </div>
         ))}
       </div>
-      <div className="text-right">
-        <button
-          onClick={handleTop}
-          className="btn bg-white text-custom-color my-20"
-        >
-          <BsArrowUpCircle></BsArrowUpCircle>
-          BACK TO TOP
-        </button>
-      </div>
+      <ScrollTop></ScrollTop>
     </div>
   );
 };

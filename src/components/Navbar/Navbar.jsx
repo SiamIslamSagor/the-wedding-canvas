@@ -19,10 +19,10 @@ const Navbar = () => {
         <NavLink to="/">HOME</NavLink>
       </li>
       <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/rooms">ROOMS & SUITES</NavLink>
+        <NavLink to="/wedding">WEDDING</NavLink>
       </li>
       <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/wedding">WEDDING</NavLink>
+        <NavLink to="/rooms">ROOMS & SUITES</NavLink>
       </li>
       <li className="hover:font-medium hover:text-red-700">
         <NavLink to="/gallery">GALLERY</NavLink>
