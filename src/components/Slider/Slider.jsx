@@ -17,7 +17,7 @@ const Slider = () => {
       .then(res => res.json())
       .then(result => setSliderData(result));
   }, []);
-  console.log(sliderData);
+  //   console.log(sliderData);
   return (
     <div className="container mx-auto">
       <Swiper
