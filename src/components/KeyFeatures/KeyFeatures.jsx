@@ -144,7 +144,7 @@ const KeyFeatures = () => {
             designed to make your long stay comfortable, with five-star hotel
             facilities and services at your fingertips.
           </p>
-          <h4 className="font-medium">Key benefits for long stay residents:</h4>
+          <h4 className="font-bold">Key benefits for long stay residents:</h4>
           <ul className="list-disc	ml-5">
             <li className="  ">
               Housekeeping cleaning services including full linen change 2 times
@@ -164,6 +164,17 @@ const KeyFeatures = () => {
             <li className="  ">
               Complimentary Wi-Fi, LED TVs, media docking station and coffee and
               tea making facilities
+            </li>
+          </ul>
+          <h4 className="font-bold">Terms and conditions:</h4>
+          <ul className="list-disc	ml-5">
+            <li>
+              All room rates are subject to 10% service charge, 7% municipality
+              fee and 5% VAT per room per night
+            </li>
+            <li>
+              Tourism Dirham Fee of AED 20 per bedroom per night is additionally
+              charged
             </li>
           </ul>
         </div>

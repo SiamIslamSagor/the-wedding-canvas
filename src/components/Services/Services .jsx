@@ -12,7 +12,10 @@ const Services = () => {
   }, []);
   return (
     <div className="container mb-20 mx-auto">
-      <p data-aos="slide-up" className="text-5xl font-bold text-center my-20">
+      <p
+        data-aos="slide-up"
+        className="text-5xl font-bold text-center my-20 underline text-gray-700"
+      >
         Our Services
       </p>
       <div className="grid px-4 gap-4 md:gap-6 xl:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -37,7 +40,7 @@ const Services = () => {
               <p>{service.short_description}</p>
               <div className="card-actions">
                 <button className="py-2 font-medium text-custom-color px-4 border-2 border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
-                  View Details{" "}
+                  View Details
                   <BsFillArrowThroughHeartFill></BsFillArrowThroughHeartFill>
                 </button>
               </div>

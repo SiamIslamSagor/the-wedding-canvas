@@ -5,9 +5,9 @@ import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer className="">
-      <div className="footer footer-center p-10 text-custom-color  py-16 border-y-2 border-[#bc9b6a]">
+      <div className="footer footer-center p-10 text-custom-color  py-16 border-y border-[#bc9b6a]">
         <aside>
-          <h2 className="text-6xl text-custom-color font-stylishFont">
+          <h2 className="text-6xl text-custom-color font-stylishFont border-y-2 border-[#bc9b6a]">
             The Wedding Canvas
           </h2>
           <p className="font-bold">

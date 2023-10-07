@@ -66,8 +66,8 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="normal-case md:text-3xl lg:text-5xl text-custom-color font-stylishFont ">
-            TheWeddingCanvas
+          <a className="normal-case md:text-3xl lg:text-5xl text-custom-color font-stylishFont border-y border-[#bc9b6a]">
+            The Wedding Canvas
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
