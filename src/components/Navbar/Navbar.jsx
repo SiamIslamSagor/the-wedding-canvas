@@ -15,23 +15,35 @@ const Navbar = () => {
   }, []);
   const links = (
     <>
-      <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/">HOME</NavLink>
+      <li className="hover:font-medium">
+        <NavLink className="hover:text-[#bc9b6a]" to="/">
+          HOME
+        </NavLink>
       </li>
-      <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/wedding">WEDDING</NavLink>
+      <li className="hover:font-medium">
+        <NavLink className="hover:text-[#bc9b6a]" to="/wedding">
+          WEDDING
+        </NavLink>
       </li>
-      <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/rooms">ROOMS & SUITES</NavLink>
+      <li className="hover:font-medium">
+        <NavLink className="hover:text-[#bc9b6a]" to="/rooms">
+          ROOMS & SUITES
+        </NavLink>
       </li>
-      <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/gallery">GALLERY</NavLink>
+      <li className="hover:font-medium">
+        <NavLink className="hover:text-[#bc9b6a]" to="/gallery">
+          GALLERY
+        </NavLink>
       </li>
-      <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/about">ABOUT</NavLink>
+      <li className="hover:font-medium">
+        <NavLink className="hover:text-[#bc9b6a]" to="/about">
+          ABOUT
+        </NavLink>
       </li>
-      <li className="hover:font-medium hover:text-red-700">
-        <NavLink to="/blog">BLOG</NavLink>
+      <li className="hover:font-medium">
+        <NavLink className="hover:text-[#bc9b6a]" to="/blog">
+          BLOG
+        </NavLink>
       </li>
     </>
   );
@@ -60,8 +72,9 @@ const Navbar = () => {
               </svg>
             </label>
             <ul
+              data-aos="slide-up"
               tabIndex={0}
-              className="menu menu-sm bg-[#27272a] dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
+              className="menu menu-sm bg-[#111827] dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
               {links}
             </ul>

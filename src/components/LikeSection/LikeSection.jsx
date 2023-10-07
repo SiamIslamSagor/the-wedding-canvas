@@ -8,7 +8,7 @@ const LikeSection = () => {
     <div className="container mx-auto">
       <div className="flex items-center justify-center mt-20 my-12 text-3xl text-custom-color text-center">
         <AiOutlineLine />
-        <h4>YOU MAY ALSO LIKE</h4>
+        <h4>YOU MAY ALSO LIKE ROOM MANAGEMENT</h4>
         <AiOutlineLine />
       </div>
 
