@@ -19,8 +19,6 @@ const Services = () => {
         {services.map(service => (
           <div
             data-aos="slide-up"
-            data-aos-duration="600"
-            data-aos-anchor-placement="top-center	"
             key={service.id}
             className="card  bg-base-100 shadow-xl"
           >

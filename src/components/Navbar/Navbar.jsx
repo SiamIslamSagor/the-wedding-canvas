@@ -1,3 +1,4 @@
+import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -14,16 +15,22 @@ const Navbar = () => {
   }, []);
   const links = (
     <>
-      <li>
+      <li className="hover:font-medium hover:text-red-700">
         <NavLink to="/">HOME</NavLink>
       </li>
-      <li>
+      <li className="hover:font-medium hover:text-red-700">
         <NavLink to="/about">ABOUT</NavLink>
       </li>
-      <li>
+      <li className="hover:font-medium hover:text-red-700">
         <NavLink to="/contact">CONTACT</NavLink>
       </li>
-      <li>
+      <li className="hover:font-medium hover:text-red-700">
+        <NavLink to="/wedding">WEDDING</NavLink>
+      </li>
+      <li className="hover:font-medium hover:text-red-700">
+        <NavLink to="/gallery">GALLERY</NavLink>
+      </li>
+      <li className="hover:font-medium hover:text-red-700">
         <NavLink to="/blog">BLOG</NavLink>
       </li>
     </>
@@ -31,7 +38,7 @@ const Navbar = () => {
   return (
     <div
       data-aos="slide-down"
-      className="z-50  duration-700 sticky top-0  max-lg:bg-black max-lg:text-white lg:bg-white drop-shadow-lg "
+      className="z-50  duration-700 sticky top-0  max-lg:bg-black max-lg:text-white lg:bg-white lg:text-custom-color drop-shadow-lg "
     >
       <div className="navbar lg:bg-base-100 container mx-auto">
         <div className="navbar-start">

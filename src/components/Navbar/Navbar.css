@@ -1,0 +1,12 @@
+.active {
+  /* background-color: white; */
+  text-decoration: underline;
+  font-weight: 700;
+}
+.menu li > *:not(ul):not(.menu-title):not(details).active,
+.menu li > details > summary:active {
+  --tw-bg-opacity: 1;
+  background-color: white;
+  --tw-text-opacity: 1;
+  color: #bc9b6a;
+}
