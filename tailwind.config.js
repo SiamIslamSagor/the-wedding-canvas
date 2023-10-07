@@ -5,6 +5,10 @@ export default {
     extend: {
       fontFamily: {
         poppins: "'Poppins', sans-serif",
+        stylishFont: "'Yellowtail', cursive",
+      },
+      textColor: {
+        "custom-color": "#bc9b6a",
       },
     },
   },
