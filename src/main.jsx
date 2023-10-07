@@ -9,6 +9,7 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import AuthProvider from "./AuthProvider/AuthProvider";
 import Wedding from "./components/Wedding/Wedding";
 import Gallery from "./components/Gallery/Gallery";
+import Rooms from "./components/Rooms/Rooms";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
+      },
+      {
+        path: "/rooms",
+        element: <Rooms></Rooms>,
       },
     ],
   },
