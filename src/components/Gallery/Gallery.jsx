@@ -14,7 +14,7 @@ const Gallery = () => {
         data-aos="slide-down"
         className="text-center my-20 text-6xl text-custom-color font-stylishFont"
       >
-        OUR GALLERY
+        Our Wedding Rooms $ Hotels Gallery
       </h3>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {allImg.map(img => (

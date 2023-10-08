@@ -1,8 +1,14 @@
 import { FaFacebookF, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiFillInstagram, AiFillYoutube } from "react-icons/ai";
+import { toast } from "react-toastify";
 
 const Footer = () => {
+  const handleSubmitEmail = () => {
+    const inputField = document.getElementById("footer_inp");
+    toast("Your Email Send Successfully");
+    inputField.value = "";
+  };
   return (
     <footer className="">
       <div className="footer footer-center p-10 text-custom-color  py-16 border-y border-[#bc9b6a]">
@@ -51,9 +57,12 @@ const Footer = () => {
               type="text"
               className="outline-none py-3 px-4 border rounded-l-full border-[#bc9b6a]"
               name=""
-              id=""
+              id="footer_inp"
             />
-            <button className="border border-[#bc9b6a] bg-[#bc9b6a] text-white font-medium py-3 px-4 rounded-r-full hover:bg-white duration-700 hover:text-[#bc9b6a]">
+            <button
+              onClick={handleSubmitEmail}
+              className="border border-[#bc9b6a] bg-[#bc9b6a] text-white font-medium py-3 px-4 rounded-r-full hover:bg-white duration-700 hover:text-[#bc9b6a]"
+            >
               SUBMIT
             </button>
           </div>

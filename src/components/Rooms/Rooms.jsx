@@ -24,7 +24,7 @@ const Rooms = () => {
         data-aos-duration="700"
         className="text-center my-20 text-6xl text-custom-color font-stylishFont"
       >
-        The Wedding Canvas Rooms & Suites
+        We Provided Luxury Rooms & Suites for Wedding
       </h3>
 
       <div className="flex flex-col items-center lg:flex-row lg:justify-around px-4 gap-5 my-14 lg:my-24">
