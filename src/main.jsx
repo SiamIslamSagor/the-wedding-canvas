@@ -10,6 +10,8 @@ import AuthProvider from "./AuthProvider/AuthProvider";
 import Wedding from "./components/Wedding/Wedding";
 import Gallery from "./components/Gallery/Gallery";
 import Rooms from "./components/Rooms/Rooms";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: "/rooms",
         element: <Rooms></Rooms>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },

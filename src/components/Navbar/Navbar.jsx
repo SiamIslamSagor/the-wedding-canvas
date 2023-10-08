@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -46,6 +46,16 @@ const Navbar = () => {
           BLOG
         </NavLink>
       </li>
+      <li className="hover:font-medium sm:hidden">
+        <NavLink className="hover:text-[#bc9b6a]" to="/login">
+          Login
+        </NavLink>
+      </li>
+      <li className="hover:font-medium sm:hidden">
+        <NavLink className="hover:text-[#bc9b6a]" to="/register">
+          Register
+        </NavLink>
+      </li>
     </>
   );
   return (
@@ -88,8 +98,17 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">login</a>
+        <div className="navbar-end max-sm:hidden">
+          <Link to="register">
+            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+              Register
+            </button>
+          </Link>
+          <Link to="/login">
+            <button className="py-2 ml-4 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </div>
