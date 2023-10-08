@@ -3,10 +3,18 @@ import "aos/dist/aos.css";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { BsFillArrowThroughHeartFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { setIdInLS } from "../../localStorage";
 
 const Services = () => {
   const { services } = useContext(AuthContext);
   console.log(services);
+
+  const handleViewDetails = clickedCardId => {
+    console.log(clickedCardId);
+    setIdInLS(clickedCardId);
+  };
+
   useEffect(() => {
     Aos.init();
   }, []);
@@ -39,10 +47,15 @@ const Services = () => {
               <p>Price: {service.price}</p>
               <p>{service.short_description}</p>
               <div className="card-actions">
-                <button className="py-2 font-medium text-custom-color px-4 border-2 border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
-                  View Details
-                  <BsFillArrowThroughHeartFill></BsFillArrowThroughHeartFill>
-                </button>
+                <Link to="/service_details">
+                  <button
+                    onClick={() => handleViewDetails(service.id)}
+                    className="py-2 font-medium text-custom-color px-4 border-2 border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+                  >
+                    View Details
+                    <BsFillArrowThroughHeartFill></BsFillArrowThroughHeartFill>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

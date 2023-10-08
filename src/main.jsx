@@ -12,6 +12,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Rooms from "./components/Rooms/Rooms";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
+import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/service_details",
+        element: <ServiceDetails></ServiceDetails>,
       },
       {
         path: "/wedding",

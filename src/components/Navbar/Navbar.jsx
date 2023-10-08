@@ -3,9 +3,23 @@ import "./Navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast("Log Out successfully");
+      })
+      .catch(() => {
+        toast("Log Out error");
+      });
+  };
+
   const location = useLocation();
   useEffect(() => {
     Aos.init({
@@ -42,11 +56,6 @@ const Navbar = () => {
           ABOUT
         </NavLink>
       </li>
-      {/* <li className="hover:font-medium">
-        <NavLink className="hover:text-[#bc9b6a]" to="/blog">
-          BLOG
-        </NavLink>
-      </li> */}
       <li className="hover:font-medium sm:hidden">
         <NavLink className="hover:text-[#bc9b6a]" to="/login">
           Login
@@ -100,50 +109,64 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <div className=" flex max-md:hidden">
-            <NavLink to="register">
-              <button className="py-2 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
-                Register
+          <div className="  max-md:hidden">
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="py-2 mr-4 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+              >
+                Log Out
               </button>
-            </NavLink>
-            <NavLink to="/login">
-              <button className="py-2 mx-4 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
-                Login
-              </button>
-            </NavLink>
+            ) : (
+              <div className="flex">
+                <NavLink to="register">
+                  <button className="py-2 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+                    Register
+                  </button>
+                </NavLink>
+                <NavLink to="/login">
+                  <button className="py-2 mx-4 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+                    Login
+                  </button>
+                </NavLink>
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-2 lg:gap-4">
             <div>
-              <h4>User User User </h4>
-            </div>
-            <div>
-              <img className="h-12 rounded-full" src={defaultProfile} alt="" />
+              <h4>{user?.displayName}</h4>
             </div>
 
-            {/* <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 rounded-full">
-                  <img src={defaultProfile} />
-                </div>
-              </label>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a className="justify-between">
-                    Profile
-                    <span className="badge">New</span>
-                  </a>
-                </li>
-                <li>
-                  <a>Settings</a>
-                </li>
-                <li>
-                  <a>Logout</a>
-                </li>
-              </ul>
-            </div> */}
+            {user ? (
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user.photoURL} />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#111827] rounded-box w-52 md:hidden"
+                >
+                  <li>
+                    <a className="hover:text-[#bc9b6a]">Settings</a>
+                  </li>
+                  <li>
+                    <a onClick={handleLogOut} className="hover:text-[#bc9b6a]">
+                      Logout
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <div>
+                <img
+                  className="h-12 rounded-full"
+                  src={defaultProfile}
+                  alt=""
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
