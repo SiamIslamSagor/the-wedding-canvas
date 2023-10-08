@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import ScrollTop from "../ScrollTop/ScrollTop";
 
 const Gallery = () => {
   const [allImg, setAllImg] = useState([]);
@@ -29,7 +28,6 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-      <ScrollTop></ScrollTop>
     </div>
   );
 };

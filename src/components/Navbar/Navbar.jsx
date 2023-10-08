@@ -1,5 +1,6 @@
+import defaultProfile from "../../assets/default_profile.jpg";
 import "./Navbar.css";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -17,35 +18,35 @@ const Navbar = () => {
   const links = (
     <>
       <li className="hover:font-medium">
-        <NavLink className="hover:text-[#bc9b6a]" to="/">
+        <NavLink className="hover:text-[#bc9b6a] max-2xl:px-2" to="/">
           HOME
         </NavLink>
       </li>
       <li className="hover:font-medium">
-        <NavLink className="hover:text-[#bc9b6a]" to="/wedding">
+        <NavLink className="hover:text-[#bc9b6a] max-2xl:px-2" to="/wedding">
           WEDDING
         </NavLink>
       </li>
       <li className="hover:font-medium">
-        <NavLink className="hover:text-[#bc9b6a]" to="/rooms">
+        <NavLink className="hover:text-[#bc9b6a] max-2xl:px-2" to="/rooms">
           ROOMS & SUITES
         </NavLink>
       </li>
       <li className="hover:font-medium">
-        <NavLink className="hover:text-[#bc9b6a]" to="/gallery">
+        <NavLink className="hover:text-[#bc9b6a] max-2xl:px-2" to="/gallery">
           GALLERY
         </NavLink>
       </li>
       <li className="hover:font-medium">
-        <NavLink className="hover:text-[#bc9b6a]" to="/about">
+        <NavLink className="hover:text-[#bc9b6a] max-2xl:px-2" to="/about">
           ABOUT
         </NavLink>
       </li>
-      <li className="hover:font-medium">
+      {/* <li className="hover:font-medium">
         <NavLink className="hover:text-[#bc9b6a]" to="/blog">
           BLOG
         </NavLink>
-      </li>
+      </li> */}
       <li className="hover:font-medium sm:hidden">
         <NavLink className="hover:text-[#bc9b6a]" to="/login">
           Login
@@ -91,24 +92,59 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="normal-case md:text-3xl lg:text-5xl text-custom-color font-logoFont my-2 border-y border-[#bc9b6a]">
+          <a className="normal-case md:text-3xl lg:text-5xl text-custom-color font-logoFont text-center my-2 border-y border-[#bc9b6a]">
             The Wedding Canvas
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end max-sm:hidden">
-          <Link to="register">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
-              Register
-            </button>
-          </Link>
-          <Link to="/login">
-            <button className="py-2 ml-4 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
-              Login
-            </button>
-          </Link>
+        <div className="navbar-end">
+          <div className=" flex max-md:hidden">
+            <NavLink to="register">
+              <button className="py-2 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+                Register
+              </button>
+            </NavLink>
+            <NavLink to="/login">
+              <button className="py-2 mx-4 text-custom-color px-3 lg:px-6  border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+                Login
+              </button>
+            </NavLink>
+          </div>
+          <div className="flex items-center gap-2 lg:gap-4">
+            <div>
+              <h4>User User User </h4>
+            </div>
+            <div>
+              <img className="h-12 rounded-full" src={defaultProfile} alt="" />
+            </div>
+
+            {/* <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={defaultProfile} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a className="justify-between">
+                    Profile
+                    <span className="badge">New</span>
+                  </a>
+                </li>
+                <li>
+                  <a>Settings</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div> */}
+          </div>
         </div>
       </div>
     </div>

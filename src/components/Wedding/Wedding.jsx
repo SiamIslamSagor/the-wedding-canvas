@@ -10,7 +10,6 @@ import "swiper/css/scrollbar";
 import { useEffect, useState } from "react";
 import { BsTelephoneInbound } from "react-icons/bs";
 import { LuPackage } from "react-icons/lu";
-import ScrollTop from "../ScrollTop/ScrollTop";
 //
 
 const Wedding = () => {
@@ -95,7 +94,6 @@ const Wedding = () => {
           CALL US <BsTelephoneInbound></BsTelephoneInbound>
         </button>
       </div>
-      <ScrollTop></ScrollTop>
     </div>
   );
 };

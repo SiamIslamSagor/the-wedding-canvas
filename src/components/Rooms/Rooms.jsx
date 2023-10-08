@@ -5,7 +5,6 @@ import room5 from "../../assets/r5.jpg";
 import room6 from "../../assets/r6.jpg";
 import room7 from "../../assets/r7.jpg";
 import room8 from "../../assets/r8.jpg";
-import ScrollTop from "../ScrollTop/ScrollTop";
 const Rooms = () => {
   return (
     <div className="container my-20 mx-auto">
@@ -214,7 +213,6 @@ const Rooms = () => {
           </div>
         </div>
       </div>
-      <ScrollTop></ScrollTop>
     </div>
   );
 };

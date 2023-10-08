@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Register = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
+        <div data-aos="fade-left" className="text-center lg:text-left">
           <span className="text-6xl text-custom-color font-logoFont my-2 border-y-2 border-[#bc9b6a]">
             The Wedding Canvas
           </span>
@@ -17,16 +19,32 @@ const Register = () => {
             love and celebration!
           </p>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div
+          data-aos="fade-right"
+          className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+        >
           <form className="card-body">
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text">Name</span>
               </label>
               <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
+                type="text"
+                name="name"
+                placeholder="Your Name*"
+                className="input input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo</span>
+              </label>
+              <input
+                type="text"
+                name="photo"
+                placeholder="Your Profile Photo URL*"
+                className="input input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
                 required
               />
             </div>
@@ -36,19 +54,9 @@ const Register = () => {
               </label>
               <input
                 type="email"
-                placeholder="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="email"
-                className="input input-bordered"
+                name="email"
+                placeholder="Your Email*"
+                className="input input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
                 required
               />
             </div>
@@ -58,18 +66,24 @@ const Register = () => {
               </label>
               <input
                 type="password"
-                placeholder="password"
-                className="input input-bordered"
+                name="password"
+                placeholder="Your Password*"
+                className="input input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
+              <div className="flex justify-center">
+                <button className="border  border-[#bc9b6a] bg-[#bc9b6a] text-white font-medium py-3 px-8 rounded-full hover:bg-white duration-700 hover:text-[#bc9b6a]">
+                  Register
+                </button>
+              </div>
+              <p className="text-center mt-6">
+                Already have an account?{" "}
+                <Link className="text-blue-700 underline" to="/login">
+                  Login
+                </Link>
+              </p>
             </div>
           </form>
         </div>
