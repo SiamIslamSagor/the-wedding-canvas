@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         poppins: "'Poppins', sans-serif",
         stylishFont: "'Yellowtail', cursive",
+        logoFont: "'Parisienne', cursive",
       },
       textColor: {
         "custom-color": "#bc9b6a",

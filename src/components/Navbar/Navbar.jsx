@@ -1,10 +1,11 @@
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Navbar = () => {
+  const location = useLocation();
   useEffect(() => {
     Aos.init({
       offset: 200,
@@ -12,7 +13,7 @@ const Navbar = () => {
       easing: "ease-in-sine",
       delay: 100,
     });
-  }, []);
+  }, [location]);
   const links = (
     <>
       <li className="hover:font-medium">
@@ -50,6 +51,7 @@ const Navbar = () => {
   return (
     <div
       // data-aos="slide-down"
+      data-aos-duration="600"
       className="z-50  duration-700 sticky top-0  max-lg:bg-black max-lg:text-white lg:bg-white lg:text-custom-color drop-shadow-lg "
     >
       <div className="navbar lg:bg-base-100 container mx-auto">
@@ -79,7 +81,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="normal-case md:text-3xl lg:text-5xl text-custom-color font-stylishFont border-y border-[#bc9b6a]">
+          <a className="normal-case md:text-3xl lg:text-5xl text-custom-color font-logoFont my-2 border-y border-[#bc9b6a]">
             The Wedding Canvas
           </a>
         </div>

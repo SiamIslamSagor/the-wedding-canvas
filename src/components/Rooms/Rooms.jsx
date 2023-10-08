@@ -11,6 +11,7 @@ const Rooms = () => {
     <div className="container my-20 mx-auto">
       <h3
         data-aos="slide-down"
+        data-aos-duration="700"
         className="text-center my-20 text-6xl text-custom-color font-stylishFont"
       >
         The Wedding Canvas Rooms & Suites

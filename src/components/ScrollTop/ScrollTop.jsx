@@ -5,7 +5,7 @@ import { BsArrowUpCircle } from "react-icons/bs";
 const ScrollTop = () => {
   const { handleTop } = useContext(AuthContext);
   return (
-    <div data-aos="fade-right" className="text-right">
+    <div data-aos="fade-right" data-aos-duration="1000" className="text-right">
       <button
         onClick={handleTop}
         className="btn bg-white text-custom-color my-20"

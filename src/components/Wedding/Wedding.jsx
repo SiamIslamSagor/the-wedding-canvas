@@ -25,6 +25,7 @@ const Wedding = () => {
     <div className="container mx-auto">
       <h3
         data-aos="slide-down"
+        data-aos-duration="700"
         className="text-center my-20 text-6xl text-custom-color font-stylishFont"
       >
         Weddings At The Wedding Canvas

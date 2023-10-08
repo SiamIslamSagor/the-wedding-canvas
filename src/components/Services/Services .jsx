@@ -36,7 +36,7 @@ const Services = () => {
               <h2 className="card-title text-3xl font-stylishFont text-custom-color">
                 {service.name}
               </h2>
-              <p>{service.price}</p>
+              <p>Price: {service.price}</p>
               <p>{service.short_description}</p>
               <div className="card-actions">
                 <button className="py-2 font-medium text-custom-color px-4 border-2 border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
