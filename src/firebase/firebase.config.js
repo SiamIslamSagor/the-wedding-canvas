@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDi5fHCsDq7IH_ABnTGmgKwrUyYsry3Vmk",
-  authDomain: "the-wedding-canvas.firebaseapp.com",
-  projectId: "the-wedding-canvas",
-  storageBucket: "the-wedding-canvas.appspot.com",
-  messagingSenderId: "33435028822",
-  appId: "1:33435028822:web:57d21a0c8751e4ff95daf7",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
