@@ -3,6 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { getIdInLS } from "../../localStorage";
 import { AiOutlineLine } from "react-icons/ai";
 import { ToastContainer } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const ServiceDetails = () => {
   const { services, handleBook } = useContext(AuthContext);
@@ -32,6 +33,9 @@ const ServiceDetails = () => {
 
   return (
     <div className="container mx-auto px-2">
+      <Helmet>
+        <title>Wedding Canvas | Service Details</title>
+      </Helmet>
       <div className="flex flex-col items-center lg:flex-row-reverse lg:justify-around px-4 gap-5 my-14 lg:my-24">
         <div data-aos="slide-down">
           <img

@@ -10,6 +10,7 @@ import "swiper/css/scrollbar";
 import { useEffect, useState } from "react";
 import { BsTelephoneInbound } from "react-icons/bs";
 import { LuPackage } from "react-icons/lu";
+import { Helmet } from "react-helmet-async";
 //
 
 const Wedding = () => {
@@ -22,6 +23,9 @@ const Wedding = () => {
   }, []);
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <title>Wedding Canvas | Wedding</title>
+      </Helmet>
       <h3
         data-aos="slide-down"
         data-aos-duration="700"

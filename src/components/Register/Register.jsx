@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser, updateUserDetails, googleLogin } =
@@ -52,6 +53,9 @@ const Register = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>Wedding Canvas | Register</title>
+      </Helmet>
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div data-aos="fade-left" className="text-center lg:text-left">
           <span className="text-6xl text-custom-color font-logoFont my-2 border-y-2 border-[#bc9b6a]">

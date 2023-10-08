@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Gallery = () => {
   const [allImg, setAllImg] = useState([]);
@@ -10,6 +11,9 @@ const Gallery = () => {
   }, []);
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <title>Wedding Canvas | Gallery</title>
+      </Helmet>
       <h3
         data-aos="slide-down"
         className="text-center my-20 text-6xl text-custom-color font-stylishFont"

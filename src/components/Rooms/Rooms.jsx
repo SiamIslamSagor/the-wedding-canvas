@@ -8,6 +8,7 @@ import room7 from "../../assets/r7.jpg";
 import room8 from "../../assets/r8.jpg";
 import { ToastContainer } from "react-toastify";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 const Rooms = () => {
   const { handleBook } = useContext(AuthContext);
 
@@ -19,6 +20,9 @@ const Rooms = () => {
   }, []);
   return (
     <div className="container my-20 mx-auto">
+      <Helmet>
+        <title>Wedding Canvas | Rooms</title>
+      </Helmet>
       <h3
         data-aos="slide-down"
         data-aos-duration="700"

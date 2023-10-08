@@ -4,6 +4,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FcGoogle } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { googleLogin, signIn } = useContext(AuthContext);
 
@@ -40,6 +41,9 @@ const Login = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
+      <Helmet>
+        <title>Wedding Canvas | Login</title>
+      </Helmet>
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div data-aos="fade-right" className="text-center lg:text-left">
           <span className="text-6xl text-custom-color font-logoFont my-2 border-y-2 border-[#bc9b6a]">
