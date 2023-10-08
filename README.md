@@ -14,6 +14,6 @@ It is an event management website. Where wedding events are managed. We provide 
 
 - At last This website is beautifully made responsive for every device and different animations are used, so that a user will feel very nice on this website and feel comfortable to take different steps on the website. The website must be SEO friendly. Here the important headings are given in HTML tags h1, h2, h3, h4. As a result, it will also give good results in SEO
 
-## 🔗 Page Live Links
+## 🔗 [Page Live Links](https://the-wedding-canvas.web.app/)
 
-https://the-wedding-canvas.web.app/
+Click here to visit live site: [https://the-wedding-canvas.web.app/](https://the-wedding-canvas.web.app/)
