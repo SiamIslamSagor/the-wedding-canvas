@@ -39,11 +39,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/gallery",
-        element: <Gallery></Gallery>,
+        element: (
+          <PrivetRoute>
+            <Gallery></Gallery>
+          </PrivetRoute>
+        ),
       },
       {
         path: "/rooms",
-        element: <Rooms></Rooms>,
+        element: (
+          <PrivetRoute>
+            <Rooms></Rooms>
+          </PrivetRoute>
+        ),
       },
       {
         path: "/register",

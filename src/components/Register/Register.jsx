@@ -2,9 +2,11 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserDetails, googleLogin } =
+    useContext(AuthContext);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -15,14 +17,35 @@ const Register = () => {
     const password = form.get("password");
     console.log(name, userProfile, email, password);
 
+    if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*\d]{6,}$/.test(password)) {
+      return toast(
+        "Password must be at least 6 characters long, contain at least one uppercase letter, and have at least one special character."
+      );
+    }
     // create user
     createUser(email, password)
-      .then(result => {
-        console.log(result.user);
+      .then(() => {
         toast("password register successfully");
+        // update user info
+        updateUserDetails(name, userProfile)
+          .then(result => console.log(result.user))
+          .catch(error => console.log(error));
       })
       .catch(error => {
         toast("password register error");
+        console.log(error);
+      });
+  };
+
+  // google login
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(result => {
+        console.log(result.user);
+        toast("google login successfully");
+      })
+      .catch(error => {
+        toast("google login error");
         console.log(error);
       });
   };
@@ -104,7 +127,7 @@ const Register = () => {
                   Register
                 </button>
               </div>
-              <p className="text-center mt-6">
+              <p className="text-center mt-6 ">
                 Already have an account?{" "}
                 <Link className="text-blue-700 underline" to="/login">
                   Login
@@ -112,6 +135,13 @@ const Register = () => {
               </p>
             </div>
           </form>
+
+          <p className="text-center border-t pt-2">Or</p>
+          <p className="text-center">Login With Google</p>
+          <button onClick={handleGoogleLogin} className="btn ">
+            <FcGoogle></FcGoogle>
+            google
+          </button>
         </div>
       </div>
       <ToastContainer></ToastContainer>

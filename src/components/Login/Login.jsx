@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FcGoogle } from "react-icons/fc";
 const Login = () => {
   const { googleLogin, signIn } = useContext(AuthContext);
 
@@ -20,7 +21,7 @@ const Login = () => {
         toast("pass login successfully");
       })
       .catch(error => {
-        toast("pass login error");
+        toast("Invalid email or password");
         console.log(error);
       });
   };
@@ -101,7 +102,10 @@ const Login = () => {
               </p>
             </div>
           </form>
+          <p className="text-center border-t pt-2">Or</p>
+          <p className="text-center">Login With Google</p>
           <button onClick={handleGoogleLogin} className="btn ">
+            <FcGoogle></FcGoogle>
             google
           </button>
         </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import room1 from "../../assets/r1.jpg";
 import room2 from "../../assets/r2.jpg";
 import room3 from "../../assets/r3.jpg";
@@ -5,7 +6,14 @@ import room5 from "../../assets/r5.jpg";
 import room6 from "../../assets/r6.jpg";
 import room7 from "../../assets/r7.jpg";
 import room8 from "../../assets/r8.jpg";
+import { ToastContainer } from "react-toastify";
 const Rooms = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <div className="container my-20 mx-auto">
       <h3
@@ -213,6 +221,7 @@ const Rooms = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
