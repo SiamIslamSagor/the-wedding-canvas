@@ -134,7 +134,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2 lg:gap-4">
             <div>
-              <h4>{user?.displayName}</h4>
+              <h4 className="text-center">{user?.displayName}</h4>
             </div>
 
             {user ? (
