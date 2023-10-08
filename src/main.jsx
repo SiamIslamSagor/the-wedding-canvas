@@ -13,6 +13,7 @@ import Rooms from "./components/Rooms/Rooms";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import PrivetRoute from "./components/PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/service_details",
-        element: <ServiceDetails></ServiceDetails>,
+        element: (
+          <PrivetRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivetRoute>
+        ),
       },
       {
         path: "/wedding",
