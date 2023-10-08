@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import room1 from "../../assets/r1.jpg";
 import room2 from "../../assets/r2.jpg";
 import room3 from "../../assets/r3.jpg";
@@ -7,7 +7,10 @@ import room6 from "../../assets/r6.jpg";
 import room7 from "../../assets/r7.jpg";
 import room8 from "../../assets/r8.jpg";
 import { ToastContainer } from "react-toastify";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Rooms = () => {
+  const { handleBook } = useContext(AuthContext);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -46,7 +49,10 @@ const Rooms = () => {
             a regal escape.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -75,7 +81,10 @@ const Rooms = () => {
             getaway or special occasions.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -103,7 +112,10 @@ const Rooms = () => {
             balcony. A sanctuary for relaxation and rejuvenation.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -131,7 +143,10 @@ const Rooms = () => {
             escape. Ideal for couples or solo travelers.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -159,7 +174,10 @@ const Rooms = () => {
             bathroom, and easy access to our serene outdoor spaces.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -187,7 +205,10 @@ const Rooms = () => {
             views. Perfect for beach lovers.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -215,7 +236,10 @@ const Rooms = () => {
             fireplace, and all the amenities for an unforgettable honeymoon.
           </p>
           <div className="max-lg:mx-auto">
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>

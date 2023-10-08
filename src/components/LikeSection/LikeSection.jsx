@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import likeImg2 from "../../assets/like2.jpg";
 import likeImg3 from "../../assets/like3.jpg";
 import likeImg4 from "../../assets/r6.jpg";
 import { AiOutlineLine } from "react-icons/ai";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { ToastContainer } from "react-toastify";
 
 const LikeSection = () => {
+  const { handleBook } = useContext(AuthContext);
+
   return (
     <div className="container mx-auto">
       <div className="flex items-center justify-center mt-20 my-12 text-3xl text-custom-color text-center">
@@ -28,7 +33,10 @@ const LikeSection = () => {
               greenery, this room features a private garden patio, a spa-like
               bathroom, and easy access to our serene outdoor spaces.
             </p>
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -50,7 +58,10 @@ const LikeSection = () => {
               Located on the 7th floor, the rooftop terrace and pool offer
               panoramic views of the Dubai City Skyline
             </p>
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
@@ -73,12 +84,16 @@ const LikeSection = () => {
               benefits designed to make your long stay comfortable, with
               five-star hotel facilities and services at your fingertips.
             </p>
-            <button className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2">
+            <button
+              onClick={handleBook}
+              className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
+            >
               BOOK NOW
             </button>
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

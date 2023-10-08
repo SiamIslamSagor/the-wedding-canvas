@@ -2,12 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { getIdInLS } from "../../localStorage";
 import { AiOutlineLine } from "react-icons/ai";
+import { ToastContainer } from "react-toastify";
 
 const ServiceDetails = () => {
-  const { services } = useContext(AuthContext);
+  const { services, handleBook } = useContext(AuthContext);
   const clickedID = getIdInLS();
   const [clickedService, setClickedService] = useState({});
-  // const clickedService = services.find(service => service.id === clickedID);
   console.log(clickedService);
   const {
     image,
@@ -52,6 +52,7 @@ const ServiceDetails = () => {
           <p>Price: {price}</p>
           <div className="max-lg:mx-auto">
             <button
+              onClick={handleBook}
               data-aos="slide-up"
               className="py-2 text-custom-color px-6 border border-[#bc9b6a] rounded-full hover:bg-[#bc9b6a] hover:text-white duration-700 flex items-center gap-2"
             >
@@ -66,6 +67,7 @@ const ServiceDetails = () => {
         <AiOutlineLine />
       </div>
       <p>{long_description}</p>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

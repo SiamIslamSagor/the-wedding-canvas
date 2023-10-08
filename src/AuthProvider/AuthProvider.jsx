@@ -11,6 +11,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
 
@@ -56,6 +57,10 @@ const AuthProvider = ({ children }) => {
     });
   };
 
+  const handleBook = () => {
+    return toast("Booking Successfully");
+  };
+
   // update profile
   const updateUserDetails = (userName, userProfile) => {
     console.log(userName, userProfile);
@@ -92,6 +97,7 @@ const AuthProvider = ({ children }) => {
     googleLogin,
     updateUserDetails,
     logOut,
+    handleBook,
     services,
   };
   return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;
