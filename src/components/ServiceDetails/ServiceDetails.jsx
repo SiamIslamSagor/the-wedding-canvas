@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { getIdInLS } from "../../localStorage";
+import { AiOutlineLine } from "react-icons/ai";
 
 const ServiceDetails = () => {
   const { services } = useContext(AuthContext);
@@ -30,9 +31,7 @@ const ServiceDetails = () => {
   }, []);
 
   return (
-    <div>
-      <h3>details are coming</h3>
-
+    <div className="container mx-auto px-2">
       <div className="flex flex-col items-center lg:flex-row-reverse lg:justify-around px-4 gap-5 my-14 lg:my-24">
         <div data-aos="slide-down">
           <img
@@ -49,7 +48,8 @@ const ServiceDetails = () => {
             {name}
           </h3>
           <p>{short_description}</p>
-          <p>{long_description}</p>
+          <p>{service_details}</p>
+          <p>Price: {price}</p>
           <div className="max-lg:mx-auto">
             <button
               data-aos="slide-up"
@@ -60,6 +60,12 @@ const ServiceDetails = () => {
           </div>
         </div>
       </div>
+      <div className="flex items-center justify-center mt-20 my-12 text-3xl text-custom-color text-center">
+        <AiOutlineLine />
+        <h4>SERVICE DESCRIPTION</h4>
+        <AiOutlineLine />
+      </div>
+      <p>{long_description}</p>
     </div>
   );
 };
