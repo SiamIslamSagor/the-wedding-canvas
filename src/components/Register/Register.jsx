@@ -28,7 +28,7 @@ const Register = () => {
     // create user
     createUser(email, password)
       .then(() => {
-        toast("password register successfully");
+        toast("Register successfully");
         // update user info
         updateUserDetails(name, userProfile)
           .then(result => console.log(result.user))
@@ -42,7 +42,7 @@ const Register = () => {
         e.target.checkbox.checked = false;
       })
       .catch(error => {
-        toast("password register error");
+        toast("Register error");
         console.log(error);
       });
   };

@@ -3,12 +3,19 @@ import "./Navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [bug, setBug] = useState("");
+  useEffect(() => {
+    setTimeout(() => {
+      setBug(user?.displayName);
+    }, 1000);
+  }, [user]);
+  console.log(bug);
 
   const handleLogOut = () => {
     logOut()
