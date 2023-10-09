@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FcGoogle } from "react-icons/fc";
 import { Helmet } from "react-helmet-async";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 const Login = () => {
   const { googleLogin, signIn } = useContext(AuthContext);
+  const [passwordType, setPasswordType] = useState(true);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -20,6 +22,10 @@ const Login = () => {
       .then(result => {
         console.log(result.user);
         toast("pass login successfully");
+
+        // clear input field
+        e.target.email.value = "";
+        e.target.password.value = "";
       })
       .catch(error => {
         toast("Invalid email or password");
@@ -80,12 +86,22 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={`${passwordType ? "password" : "text"}`}
                 name="password"
                 placeholder="Your Password*"
-                className="input input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
+                className="input pr-16 input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
                 required
               />
+              <span
+                onClick={() => setPasswordType(!passwordType)}
+                className="cursor-pointer text-gray-500 text-xl font-bold  absolute bottom-[313px] right-12"
+              >
+                {passwordType ? (
+                  <AiOutlineEyeInvisible></AiOutlineEyeInvisible>
+                ) : (
+                  <AiOutlineEye></AiOutlineEye>
+                )}
+              </span>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?

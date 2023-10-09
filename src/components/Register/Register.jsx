@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
+import { AiFillEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
+  const [passwordType, setPasswordType] = useState(true);
   const { createUser, updateUserDetails, googleLogin } =
     useContext(AuthContext);
 
@@ -31,6 +33,12 @@ const Register = () => {
         updateUserDetails(name, userProfile)
           .then(result => console.log(result.user))
           .catch(error => console.log(error));
+        // clear input field
+        e.target.name.value = "";
+        e.target.photo.value = "";
+        e.target.email.value = "";
+        e.target.password.value = "";
+        e.target.checkbox.checked = false;
       })
       .catch(error => {
         toast("password register error");
@@ -118,12 +126,32 @@ const Register = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={`${passwordType ? "password" : "text"}`}
                 name="password"
                 placeholder="Your Password*"
                 className="input input-bordered border-[#bc9b6a] text-custom-color focus:outline-none"
                 required
               />
+              <span
+                onClick={() => setPasswordType(!passwordType)}
+                className="cursor-pointer text-gray-500 font-bold text-xl absolute bottom-[313px] right-12"
+              >
+                {passwordType ? (
+                  <AiFillEyeInvisible></AiFillEyeInvisible>
+                ) : (
+                  <AiOutlineEye></AiOutlineEye>
+                )}
+              </span>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="checkbox"
+                className="mr-1"
+                required
+              />
+              <label> Accept our Terms & Conditions</label>
+              <br></br>
             </div>
             <div className="form-control mt-6">
               <div className="flex justify-center">
