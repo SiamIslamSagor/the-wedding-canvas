@@ -5,7 +5,7 @@ import ScrollTop from "../../components/ScrollTop/ScrollTop";
 
 const Root = () => {
   return (
-    <div className="font-poppins">
+    <div className="font-poppins overflow-x-hidden">
       <Navbar></Navbar>
       <div>
         <Outlet></Outlet>
