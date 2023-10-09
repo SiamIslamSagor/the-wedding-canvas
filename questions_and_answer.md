@@ -45,7 +45,7 @@ sum(1, "2");
 
 #### Answer: C
 
-<i>The console is not logged here, if it is then the sum function returns the sum of a, b. Then sum is called with value one of A and value two of B, but value two of B is a string that can be concatenated to twelve i.e. answer is C</i>
+<i>Here console.log is not done, if it is console log then sum function returns sum of a, b. Then the sum is called with value one of A and value two of B, but value two of B is a string that can be concatenated with A resulting in answer twelve so the answer is C. Otherwise the console will be empty.</i>
 
 </p>
 </details>
