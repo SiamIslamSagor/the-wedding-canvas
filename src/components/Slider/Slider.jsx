@@ -28,8 +28,6 @@ const Slider = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={swiper => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
       >
         {sliderData.map(obj => (
           <SwiperSlide key={obj.id}>

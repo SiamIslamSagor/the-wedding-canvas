@@ -33,6 +33,7 @@ const Register = () => {
         updateUserDetails(name, userProfile)
           .then(result => console.log(result.user))
           .catch(error => console.log(error));
+
         // clear input field
         e.target.name.value = "";
         e.target.photo.value = "";

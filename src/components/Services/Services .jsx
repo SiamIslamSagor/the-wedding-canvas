@@ -8,7 +8,6 @@ import { setIdInLS } from "../../localStorage";
 
 const Services = () => {
   const { services } = useContext(AuthContext);
-  console.log(services);
 
   const handleViewDetails = clickedCardId => {
     console.log(clickedCardId);
